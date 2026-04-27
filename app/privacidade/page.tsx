@@ -199,8 +199,8 @@ export default function PrivacidadePage() {
             pessoais ou exercício de direitos de titular, entre em contato:
           </p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>E-mail: privacidade@kynovia.com</li>
-            <li>Contato geral: contato@kynovia.com</li>
+            <li>E-mail: privacidade@kynovia.com.br</li>
+            <li>Contato geral: contato@kynovia.com.br</li>
           </ul>
         </section>
       </div>

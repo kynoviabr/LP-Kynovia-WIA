@@ -22,10 +22,10 @@ export default function ContatoPage() {
               E-mail
             </p>
             <a
-              href="mailto:contato@kynovia.com"
+              href="mailto:contato@kynovia.com.br"
               className="mt-2 block text-lg font-semibold text-kyn-text-primary transition hover:text-white"
             >
-              contato@kynovia.com
+              contato@kynovia.com.br
             </a>
           </div>
 
