@@ -37,7 +37,7 @@ const kanbanColumns = [
   {
     title: "Novos",
     badge: "entrada",
-    cards: ["Studio Oral", "Viva Ensino"],
+    cards: ["Clinica Master", "Viva Ensino"],
   },
   {
     title: "Qualificados",
@@ -298,7 +298,48 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-6 grid gap-4 xl:grid-cols-3">
+              <div className="relative mt-6">
+                <motion.div
+                  aria-hidden
+                  className="pointer-events-none absolute left-0 top-[4.25rem] z-20 hidden w-[calc((100%-2rem)/3)] md:block"
+                  animate={
+                    shouldReduceMotion
+                      ? { opacity: 0 }
+                      : {
+                          x: ["0%", "0%", "103%", "206%", "206%"],
+                          y: [0, 0, -6, 0, 0],
+                          opacity: [0, 1, 1, 1, 0],
+                          scale: [0.98, 1, 1, 1, 0.98],
+                        }
+                  }
+                  transition={
+                    shouldReduceMotion
+                      ? { duration: 0 }
+                      : {
+                          duration: 5.8,
+                          repeat: Infinity,
+                          ease: [0.16, 1, 0.3, 1],
+                          times: [0, 0.16, 0.5, 0.82, 1],
+                          repeatDelay: 0.8,
+                        }
+                  }
+                >
+                  <div className="rounded-[1.25rem] border border-emerald-300/20 bg-[linear-gradient(180deg,rgba(31,41,55,0.92),rgba(13,18,29,0.82))] p-4 shadow-[0_22px_46px_rgba(0,0,0,0.42)] backdrop-blur-xl">
+                    <div className="flex items-center justify-between gap-3">
+                      <div>
+                        <p className="font-medium text-white">Clinica Master</p>
+                        <p className="mt-1 text-sm text-kyn-text-secondary">
+                          Qualificado pela IA e encaminhado para vendas
+                        </p>
+                      </div>
+                      <span className="rounded-full bg-emerald-400/15 px-2 py-1 text-[11px] font-medium text-emerald-200">
+                        em movimento
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <div className="grid gap-4 md:grid-cols-3">
                 {kanbanColumns.map((column, columnIndex) => (
                   <Card
                     key={column.title}
@@ -319,14 +360,14 @@ export default function Home() {
                               animate: shouldReduceMotion
                                 ? { y: 0, opacity: 1 }
                                 : {
-                                    y: [14, 0, 0, -2, 0],
-                                    x: [0, 0, 0, 1, 0],
-                                    opacity: [0, 1, 1, 1, 1],
+                                    y: [12, 0, 0, 0],
+                                    opacity: [0.45, 0.7, 0.45, 0.45],
+                                    scale: [0.985, 1, 0.985, 0.985],
                                   },
                               transition: shouldReduceMotion
                                 ? { duration: 0 }
                                 : {
-                                    duration: 4.4,
+                                    duration: 5.8,
                                     repeat: Infinity,
                                     ease: "easeInOut",
                                     repeatDelay: 0.8,
@@ -357,6 +398,7 @@ export default function Home() {
                     </div>
                   </Card>
                 ))}
+                </div>
               </div>
             </motion.div>
           </div>
