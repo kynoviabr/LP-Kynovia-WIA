@@ -51,7 +51,7 @@ export default function SignupPage() {
     setSuccess("");
 
     if (!isValid) {
-      setError("Preencha todos os campos com dados validos.");
+      setError("Preencha todos os campos com dados válidos.");
       return;
     }
 
@@ -67,14 +67,16 @@ export default function SignupPage() {
       const data = (await response.json()) as { ok?: boolean; error?: string };
 
       if (!response.ok || !data.ok) {
-        setError(data.error ?? "Nao foi possivel enviar. Tente novamente.");
+        setError(data.error ?? "Não foi possível enviar. Tente novamente.");
         return;
       }
 
-      setSuccess("Lead enviado com sucesso. Nosso time vai entrar em contato.");
+      setSuccess(
+        "Recebemos seu pedido. Nosso time vai entrar em contato para agendar a demonstração."
+      );
       setForm(initialState);
     } catch {
-      setError("Erro de conexao ao enviar. Tente novamente em instantes.");
+      setError("Erro de conexão ao enviar. Tente novamente em instantes.");
     } finally {
       setIsSubmitting(false);
     }
@@ -84,14 +86,15 @@ export default function SignupPage() {
     <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-14 md:px-10">
       <div className="rounded-2xl border border-kyn-border bg-kyn-background-elevated p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)] md:p-8">
         <p className="inline-block rounded-full border border-kyn-border-strong bg-kyn-background px-3 py-1 text-xs font-semibold uppercase tracking-[0.05em] text-kyn-text-secondary">
-          Comecar trial
+          Solicitar demonstração
         </p>
         <h1 className="mt-4 text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-          Fale com a Kynovia e ative seu agente de IA
+          Fale com a Kynovia e veja o agente em operação
         </h1>
         <p className="mt-3 text-kyn-text-secondary">
-          Preencha o formulario abaixo para receber uma demonstracao guiada e
-          iniciar seu onboarding.
+          Preencha o formulário para receber uma demonstração da Kynovia no
+          WhatsApp e mostrar como o agente qualifica e entrega contexto para o
+          seu time comercial.
         </p>
 
         <form onSubmit={onSubmit} className="mt-8 grid gap-4">
@@ -113,7 +116,7 @@ export default function SignupPage() {
               value={form.email}
               onChange={onChange("email")}
               className="h-11 rounded-md border border-kyn-border-strong bg-kyn-background px-3 text-kyn-text-primary outline-none transition focus:border-kyn-primary"
-              placeholder="voce@empresa.com"
+              placeholder="nome@empresa.com.br"
               autoComplete="email"
             />
           </label>
@@ -138,9 +141,9 @@ export default function SignupPage() {
             >
               <option value="">Selecione</option>
               <option value="franquias">Franquias</option>
-              <option value="clinicas">Clinicas</option>
+              <option value="clinicas">Clínicas</option>
               <option value="escolas">Escolas</option>
-              <option value="imobiliarias">Imobiliarias</option>
+              <option value="imobiliarias">Imobiliárias</option>
               <option value="consultorias">Consultorias</option>
               <option value="outro">Outro</option>
             </select>
@@ -180,7 +183,7 @@ export default function SignupPage() {
               disabled={!isValid || isSubmitting}
               className="w-full disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {isSubmitting ? "Enviando..." : "Solicitar demonstracao"}
+              {isSubmitting ? "Enviando..." : "Solicitar demonstração"}
             </Button>
           </div>
         </form>

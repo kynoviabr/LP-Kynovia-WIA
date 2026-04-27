@@ -2,25 +2,25 @@ export default function PrivacidadePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-4xl px-6 py-16 text-kyn-text-primary">
       <h1 className="text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-        Politica de Privacidade
+        Política de Privacidade
       </h1>
       <p className="mt-3 text-sm text-kyn-text-muted">
-        Ultima atualizacao: 23 de abril de 2026
+        Última atualização: 23 de abril de 2026
       </p>
 
       <div className="mt-8 space-y-8 text-sm leading-7 text-kyn-text-secondary">
         <section>
-          <h2 className="text-xl font-semibold text-kyn-text-primary">1. Introducao</h2>
+          <h2 className="text-xl font-semibold text-kyn-text-primary">1. Introdução</h2>
           <p className="mt-2">
-            A Kynovia valoriza a privacidade e a protecao dos dados pessoais de
-            seus usuarios, clientes e visitantes. Esta Politica de Privacidade
+            A Kynovia valoriza a privacidade e a proteção dos dados pessoais de
+            seus usuários, clientes e visitantes. Esta Política de Privacidade
             descreve como coletamos, usamos, compartilhamos e protegemos dados
-            pessoais no contexto de nosso site, plataforma e servicos.
+            pessoais no contexto de nosso site, plataforma e serviços.
           </p>
           <p className="mt-2">
-            O tratamento de dados pessoais e realizado em conformidade com a Lei
-            Geral de Protecao de Dados Pessoais (Lei no 13.709/2018 - LGPD) e
-            demais normas aplicaveis.
+            O tratamento de dados pessoais é realizado em conformidade com a Lei
+            Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD) e
+            demais normas aplicáveis.
           </p>
         </section>
 
@@ -36,15 +36,15 @@ export default function PrivacidadePage() {
             </li>
             <li>
               Dados de uso da plataforma: logs de acesso, data e hora de uso,
-              paginas visitadas, interacoes e eventos.
+              páginas visitadas, interações e eventos.
             </li>
             <li>
-              Dados tecnicos: endereco IP, navegador, dispositivo, sistema
-              operacional e identificadores de sessao.
+              Dados técnicos: endereço IP, navegador, dispositivo, sistema
+              operacional e identificadores de sessão.
             </li>
             <li>
-              Dados fornecidos voluntariamente em formularios, atendimentos e
-              comunicacoes com nosso time.
+              Dados fornecidos voluntariamente em formulários, atendimentos e
+              comunicações com nosso time.
             </li>
           </ul>
         </section>
@@ -55,19 +55,19 @@ export default function PrivacidadePage() {
           </h2>
           <p className="mt-2">Tratamos dados pessoais para:</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>fornecer, operar e melhorar nossos produtos e servicos;</li>
+            <li>fornecer, operar e melhorar nossos produtos e serviços;</li>
             <li>
               executar processos de onboarding, suporte, atendimento e sucesso do
               cliente;
             </li>
-            <li>gerenciar relacao comercial e comunicacoes institucionais;</li>
-            <li>cumprir obrigacoes legais, regulatórias e contratuais;</li>
+            <li>gerenciar relação comercial e comunicações institucionais;</li>
+            <li>cumprir obrigações legais, regulatórias e contratuais;</li>
             <li>
-              prevenir fraudes, incidentes de seguranca e uso indevido da
+              prevenir fraudes, incidentes de segurança e uso indevido da
               plataforma;
             </li>
             <li>
-              realizar analises de desempenho, metricas e aprimoramentos de
+              realizar análises de desempenho, métricas e aprimoramentos de
               produto.
             </li>
           </ul>
@@ -79,9 +79,9 @@ export default function PrivacidadePage() {
           </h2>
           <p className="mt-2">
             O tratamento de dados pessoais pela Kynovia pode ocorrer com base nas
-            seguintes hipoteses legais previstas na LGPD, conforme o caso:
-            execucao de contrato, cumprimento de obrigacao legal ou regulatoria,
-            exercicio regular de direitos, legitimo interesse e consentimento.
+            seguintes hipóteses legais previstas na LGPD, conforme o caso:
+            execução de contrato, cumprimento de obrigação legal ou regulatória,
+            exercício regular de direitos, legítimo interesse e consentimento.
           </p>
         </section>
 
@@ -94,54 +94,54 @@ export default function PrivacidadePage() {
           </p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li>
-              operadores e fornecedores que apoiam a prestacao dos servicos
-              (infraestrutura, hospedagem, analytics, suporte e comunicacao);
+              operadores e fornecedores que apoiam a prestação dos serviços
+              (infraestrutura, hospedagem, analytics, suporte e comunicação);
             </li>
-            <li>parceiros comerciais, quando necessario para a operacao;</li>
+            <li>parceiros comerciais, quando necessário para a operação;</li>
             <li>
-              autoridades publicas, mediante obrigacao legal, ordem judicial ou
-              requisicao valida.
+              autoridades públicas, mediante obrigação legal, ordem judicial ou
+              requisição válida.
             </li>
           </ul>
           <p className="mt-2">
-            Sempre que aplicavel, exigimos de terceiros padroes adequados de
-            seguranca e confidencialidade.
+            Sempre que aplicável, exigimos de terceiros padrões adequados de
+            segurança e confidencialidade.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-kyn-text-primary">
-            6. Transferencia internacional de dados
+            6. Transferência internacional de dados
           </h2>
           <p className="mt-2">
             Alguns de nossos fornecedores podem processar dados fora do Brasil.
-            Nesses casos, adotamos salvaguardas contratuais e medidas tecnicas
-            para garantir nivel adequado de protecao, nos termos da LGPD.
+            Nesses casos, adotamos salvaguardas contratuais e medidas técnicas
+            para garantir nível adequado de proteção, nos termos da LGPD.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-kyn-text-primary">
-            7. Retencao e descarte
+            7. Retenção e descarte
           </h2>
           <p className="mt-2">
-            Mantemos os dados pessoais pelo tempo necessario para cumprir as
-            finalidades desta politica, obrigacoes legais e regulatórias, bem
-            como para exercicio regular de direitos. Apos esse periodo, os dados
-            sao eliminados ou anonimizados, ressalvadas as hipoteses legais de
-            conservacao.
+            Mantemos os dados pessoais pelo tempo necessário para cumprir as
+            finalidades desta política, obrigações legais e regulatórias, bem
+            como para exercício regular de direitos. Após esse período, os dados
+            são eliminados ou anonimizados, ressalvadas as hipóteses legais de
+            conservação.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-kyn-text-primary">
-            8. Seguranca da informacao
+            8. Segurança da informação
           </h2>
           <p className="mt-2">
-            Adotamos medidas tecnicas e administrativas razoaveis para proteger
-            dados pessoais contra acesso nao autorizado, destruicao, perda,
-            alteracao, comunicacao ou qualquer forma de tratamento inadequado ou
-            ilicito.
+            Adotamos medidas técnicas e administrativas razoáveis para proteger
+            dados pessoais contra acesso não autorizado, destruição, perda,
+            alteração, comunicação ou qualquer forma de tratamento inadequado ou
+            ilícito.
           </p>
         </section>
 
@@ -154,17 +154,17 @@ export default function PrivacidadePage() {
             outros direitos:
           </p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>confirmacao da existencia de tratamento;</li>
+            <li>confirmação da existência de tratamento;</li>
             <li>acesso aos dados;</li>
-            <li>correcao de dados incompletos, inexatos ou desatualizados;</li>
-            <li>anonimizacao, bloqueio ou eliminacao de dados desnecessarios;</li>
-            <li>portabilidade dos dados, quando aplicavel;</li>
-            <li>informacao sobre compartilhamento de dados;</li>
-            <li>revogacao do consentimento, quando essa for a base legal.</li>
+            <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+            <li>portabilidade dos dados, quando aplicável;</li>
+            <li>informação sobre compartilhamento de dados;</li>
+            <li>revogação do consentimento, quando essa for a base legal.</li>
           </ul>
           <p className="mt-2">
             Para exercer seus direitos, entre em contato pelos canais indicados na
-            secao 12.
+            seção 12.
           </p>
         </section>
 
@@ -174,19 +174,19 @@ export default function PrivacidadePage() {
           </h2>
           <p className="mt-2">
             Utilizamos cookies e tecnologias similares para funcionamento do site,
-            autenticacao, seguranca, analise de uso e melhoria de experiencia. Voce
-            pode gerenciar preferencias de cookies em seu navegador.
+            autenticação, segurança, análise de uso e melhoria de experiência. Você
+            pode gerenciar preferências de cookies em seu navegador.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-kyn-text-primary">
-            11. Alteracoes desta politica
+            11. Alterações desta política
           </h2>
           <p className="mt-2">
-            Esta Politica de Privacidade pode ser atualizada periodicamente para
-            refletir mudancas legais, tecnicas ou operacionais. Recomendamos a
-            revisao regular desta pagina.
+            Esta Política de Privacidade pode ser atualizada periodicamente para
+            refletir mudanças legais, técnicas ou operacionais. Recomendamos a
+            revisão regular desta página.
           </p>
         </section>
 
@@ -195,8 +195,8 @@ export default function PrivacidadePage() {
             12. Contato e encarregado (DPO)
           </h2>
           <p className="mt-2">
-            Para duvidas sobre esta politica, solicitacoes relacionadas a dados
-            pessoais ou exercicio de direitos de titular, entre em contato:
+            Para dúvidas sobre esta política, solicitações relacionadas a dados
+            pessoais ou exercício de direitos de titular, entre em contato:
           </p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li>E-mail: privacidade@kynovia.com</li>
@@ -206,9 +206,9 @@ export default function PrivacidadePage() {
       </div>
 
       <p className="mt-10 rounded-lg border border-kyn-border bg-kyn-background-elevated p-4 text-xs leading-6 text-kyn-text-muted">
-        Aviso importante: este texto e um modelo geral de politica de
-        privacidade. Recomenda-se revisao juridica especializada para adequacao
-        completa ao contexto operacional e regulatorio da sua empresa.
+        Aviso importante: este texto é um modelo geral de política de
+        privacidade. Recomenda-se revisão jurídica especializada para adequação
+        completa ao contexto operacional e regulatório da sua empresa.
       </p>
     </main>
   );

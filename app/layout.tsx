@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kynovia | CRM com Agente de IA",
+  title: "Kynovia | Agente Comercial com IA para WhatsApp",
   description:
-    "Kynovia e o CRM com agente de IA para automatizar vendas, atendimento e operacoes.",
+    "Agente comercial com IA para equipes B2B que operam no WhatsApp e precisam responder rápido, qualificar melhor e entregar contexto para vendas.",
 };
 
 export default function RootLayout({

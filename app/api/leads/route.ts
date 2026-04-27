@@ -31,35 +31,35 @@ export async function POST(request: Request) {
 
     if (!nome || nome.length < 2) {
       return NextResponse.json(
-        { ok: false, error: "Nome invalido." },
+        { ok: false, error: "Nome inválido." },
         { status: 400 }
       );
     }
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
-        { ok: false, error: "E-mail invalido." },
+        { ok: false, error: "E-mail inválido." },
         { status: 400 }
       );
     }
 
     if (!whatsapp || whatsapp.replace(/\D/g, "").length < 10) {
       return NextResponse.json(
-        { ok: false, error: "WhatsApp invalido." },
+        { ok: false, error: "WhatsApp inválido." },
         { status: 400 }
       );
     }
 
     if (!validSegments.includes(segmento as (typeof validSegments)[number])) {
       return NextResponse.json(
-        { ok: false, error: "Segmento invalido." },
+        { ok: false, error: "Segmento inválido." },
         { status: 400 }
       );
     }
 
     if (!validTeams.includes(equipe as (typeof validTeams)[number])) {
       return NextResponse.json(
-        { ok: false, error: "Tamanho de equipe invalido." },
+        { ok: false, error: "Tamanho da equipe inválido." },
         { status: 400 }
       );
     }
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Nao foi possivel processar o lead." },
+      { ok: false, error: "Não foi possível processar o lead." },
       { status: 500 }
     );
   }

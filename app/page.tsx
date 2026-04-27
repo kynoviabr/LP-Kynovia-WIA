@@ -54,21 +54,21 @@ const kanbanColumns = [
 const resources = [
   {
     eyebrow: "WhatsApp",
-    title: "Responde em segundos no canal onde o lead ja esta",
+    title: "Responde em segundos no canal onde o lead já está",
     description:
-      "A Kynovia opera direto no WhatsApp. O lead recebe retorno rapido, com mensagem util e contexto desde o primeiro contato.",
+      "A Kynovia opera direto no WhatsApp. O lead recebe retorno rápido, com mensagem útil e contexto desde o primeiro contato.",
   },
   {
-    eyebrow: "Qualificacao",
+    eyebrow: "Qualificação",
     title: "Faz perguntas progressivas antes de chamar o vendedor",
     description:
-      "A IA identifica dor, urgencia, perfil e interesse real. O vendedor entra quando ja existe uma oportunidade com contexto pronto.",
+      "A IA identifica dor, urgência, perfil e interesse real. O vendedor entra quando já existe uma oportunidade com contexto pronto.",
   },
   {
     eyebrow: "Pipeline",
-    title: "Atualiza o Kanban conforme a operacao acontece",
+    title: "Atualiza o Kanban conforme a operação acontece",
     description:
-      "Nao e CRM. Nao e chatbot generico. E um agente comercial que tira o trabalho manual do primeiro contato, follow-up e triagem.",
+      "Não é CRM. Não é chatbot genérico. É um agente comercial que tira o trabalho manual do primeiro contato, follow-up e triagem.",
   },
 ];
 
@@ -77,19 +77,19 @@ const workflow = [
     step: "01",
     title: "O lead chama no WhatsApp e recebe resposta imediata",
     description:
-      "A conversa comeca sem fila humana. A Kynovia aborda, entende a demanda e conduz o primeiro contato.",
+      "A conversa começa sem fila humana. A Kynovia aborda, entende a demanda e conduz o primeiro contato.",
   },
   {
     step: "02",
     title: "A IA qualifica com perguntas progressivas",
     description:
-      "Ela coleta informacoes importantes sem parecer formulario travado e separa curiosos de oportunidades reais.",
+      "Ela coleta informações importantes sem parecer formulário travado e separa curiosos de oportunidades reais.",
   },
   {
     step: "03",
     title: "O vendedor recebe a oportunidade com contexto pronto",
     description:
-      "Quando faz sentido escalar, o time entra com historico, motivo do contato e proximo passo ja sugerido.",
+      "Quando faz sentido escalar, o time entra com histórico, motivo do contato e próximo passo já sugerido.",
   },
 ];
 
@@ -152,10 +152,7 @@ export default function Home() {
                 variants={revealUp}
                 className="hidden items-center gap-3 text-xs text-kyn-text-secondary md:flex"
               >
-                <span>Primeiro contato, follow-up e qualificacao</span>
-                <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-kyn-text-primary">
-                  WhatsApp no MVP
-                </span>
+                <span>Primeiro contato, qualificação e follow-up</span>
               </motion.div>
             </div>
 
@@ -165,7 +162,7 @@ export default function Home() {
                   variants={revealUp}
                   className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.05em] md:text-6xl lg:text-[4rem]"
                 >
-                  Seu SDR no WhatsApp, 24 horas por dia.
+                  Seu SDR com IA no WhatsApp, 24 horas por dia.
                 </motion.h1>
 
                 <motion.p
@@ -185,7 +182,7 @@ export default function Home() {
                     href="/signup"
                     className="inline-flex h-14 w-full items-center justify-center rounded-[1.15rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.08))] px-8 text-center text-base font-semibold leading-none tracking-[-0.01em] text-white shadow-[0_18px_40px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-2xl transition hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1))]"
                   >
-                    Solicitar demonstracao
+                    Solicitar demonstração
                   </Link>
                   <Link
                     href="/contato"
@@ -200,8 +197,8 @@ export default function Home() {
                   className="mt-7 grid gap-3 text-sm text-kyn-text-secondary md:grid-cols-3"
                 >
                   {[
-                    "Nao e CRM nem chatbot generico.",
-                    "Opera so no WhatsApp no MVP.",
+                    "Não é CRM nem chatbot genérico.",
+                    "Opera só no WhatsApp.",
                     "Entrega contexto pronto para o vendedor.",
                   ].map((item) => (
                     <div
@@ -234,18 +231,18 @@ export default function Home() {
                   </p>
                   <p className="mt-3 text-lg leading-8 text-[color:rgba(250,250,250,0.82)]">
                     Prospecta leads, responde no WhatsApp, qualifica com perguntas
-                    progressivas e entrega para o vendedor humano so o que vale
-                    atencao.
+                    progressivas e entrega para o vendedor humano só o que merece
+                    atenção.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-white/8 bg-black/18 p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                    O que nao e
+                    O que não é
                   </p>
                   <p className="mt-3 text-lg leading-8 text-[color:rgba(250,250,250,0.82)]">
-                    Nao e CRM. Nao e chatbot generico. Nao substitui o vendedor.
+                    Não é CRM. Não é chatbot genérico. Não substitui o vendedor.
                     Ele elimina o trabalho manual do primeiro contato, do
-                    follow-up e da qualificacao.
+                    follow-up e da qualificação.
                   </p>
                 </div>
               </motion.div>
@@ -261,173 +258,132 @@ export default function Home() {
           variants={sectionContainer}
           className="overflow-hidden rounded-[1.9rem] border border-white/8 bg-[linear-gradient(135deg,rgba(124,58,237,0.15),rgba(7,10,16,0.94)_45%,rgba(9,12,20,0.98))]"
         >
-          <div className="grid gap-8 px-6 py-8 md:px-8 md:py-10 lg:grid-cols-[0.82fr_1.18fr]">
-            <motion.div variants={revealUp}>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                Pipeline automatico
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] md:text-5xl">
-                O Kanban se atualiza conforme a IA opera no WhatsApp.
-              </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[color:rgba(250,250,250,0.72)]">
-                Cada conversa muda o status da oportunidade. O vendedor nao precisa
-                descobrir sozinho quem merece atencao agora.
-              </p>
-              <div className="mt-6 grid gap-3">
-                <div className="rounded-2xl border border-white/8 bg-black/20 px-4 py-4 text-sm leading-7 text-kyn-text-secondary">
-                  Para equipes B2B no Brasil que perdem oportunidade por demora no
-                  primeiro contato ou por follow-up inconsistente.
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
+            <motion.div variants={revealUp} className="p-6 md:p-8 lg:p-10">
+              <SectionTitle
+                title="A IA conversa, qualifica e move a oportunidade no pipeline"
+                description="O Kanban acompanha a operação sem depender de atualização manual. Quando a conversa evolui, a oportunidade muda de etapa com contexto para o time comercial."
+              />
+
+              <div className="mt-6 space-y-4 text-sm leading-7 text-kyn-text-secondary">
+                <div className="rounded-2xl border border-white/10 bg-black/20 p-4 backdrop-blur-md">
+                  Lead: &ldquo;Quero entender se funciona para a minha equipe comercial.&rdquo;
                 </div>
-                <div className="rounded-2xl border border-white/8 bg-black/20 px-4 py-4 text-sm leading-7 text-kyn-text-secondary">
-                  O vendedor humano entra na hora certa, com historico e contexto
-                  pronto.
+                <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-[color:rgba(231,255,245,0.88)] backdrop-blur-md">
+                  IA: &ldquo;Claro. Hoje vocês recebem os leads por WhatsApp e fazem o
+                  primeiro contato com rapidez?&rdquo;
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/20 p-4 backdrop-blur-md">
+                  Ela identifica perfil, urgência, interesse e momento da compra.
+                  Se fizer sentido, agenda a próxima etapa e entrega o histórico.
                 </div>
               </div>
             </motion.div>
 
-            <motion.div variants={revealUp} className="relative rounded-[1.55rem] border border-white/10 bg-[#0d111a] p-4 md:p-5">
-              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <motion.div
+              variants={revealUp}
+              className="border-t border-white/8 bg-[linear-gradient(180deg,rgba(5,6,12,0.82),rgba(5,6,12,0.98))] p-5 md:p-8 lg:border-l lg:border-t-0 lg:p-10"
+            >
+              <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-kyn-text-muted">
-                    Kanban em movimento
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
+                    Kanban automático
                   </p>
-                  <p className="mt-2 text-lg font-semibold">
-                    O lead avanca sozinho conforme responde no WhatsApp
+                  <p className="mt-2 text-lg font-medium text-white">
+                    Pipeline atualizado pela operação da IA
                   </p>
                 </div>
-                <span className="w-fit rounded-full border border-emerald-400/30 bg-emerald-400/12 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-100">
-                  Operando agora
-                </span>
+                <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-kyn-text-secondary">
+                  ao vivo
+                </div>
               </div>
 
-              <div className="relative mt-5 grid gap-3 lg:grid-cols-3">
-                {kanbanColumns.map((column) => (
-                  <div
+              <div className="mt-6 grid gap-4 xl:grid-cols-3">
+                {kanbanColumns.map((column, columnIndex) => (
+                  <Card
                     key={column.title}
-                    className="rounded-[1.2rem] border border-white/8 bg-white/[0.04] p-3"
+                    className="relative min-h-[15rem] rounded-[1.6rem] border border-white/8 bg-white/[0.04] p-4 shadow-none backdrop-blur-xl"
                   >
-                    <div className="flex items-center justify-between">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-kyn-text-secondary">
-                        {column.title}
-                      </p>
-                      <span className="rounded-full bg-white/8 px-2 py-1 text-[10px] text-kyn-text-secondary">
+                    <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-kyn-text-muted">
+                      <span>{column.title}</span>
+                      <span className="rounded-full border border-white/10 px-2 py-1 text-[10px] text-white/70">
                         {column.badge}
                       </span>
                     </div>
-                    <div className="mt-3 space-y-2">
-                      {column.cards.map((card) => (
-                        <div
-                          key={card}
-                          className="rounded-xl border border-white/8 bg-[#161d28] px-3 py-2 text-xs text-white/88"
-                        >
-                          {card}
-                        </div>
-                      ))}
+
+                    <div className="mt-4 space-y-3">
+                      {column.cards.map((card, cardIndex) => {
+                        const animated = columnIndex === 1 && cardIndex === 0;
+                        const motionProps = animated
+                          ? {
+                              animate: shouldReduceMotion
+                                ? { y: 0, opacity: 1 }
+                                : {
+                                    y: [14, 0, 0, -2, 0],
+                                    x: [0, 0, 0, 1, 0],
+                                    opacity: [0, 1, 1, 1, 1],
+                                  },
+                              transition: shouldReduceMotion
+                                ? { duration: 0 }
+                                : {
+                                    duration: 4.4,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                    repeatDelay: 0.8,
+                                  },
+                            }
+                          : {};
+
+                        return (
+                          <motion.div
+                            key={card}
+                            {...motionProps}
+                            className="rounded-[1.25rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05))] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.24)]"
+                          >
+                            <div className="flex items-center justify-between gap-3">
+                              <div>
+                                <p className="font-medium text-white">{card}</p>
+                                <p className="mt-1 text-sm text-kyn-text-secondary">
+                                  Perfil compatível com operação B2B
+                                </p>
+                              </div>
+                              <span className="rounded-full bg-emerald-400/15 px-2 py-1 text-[11px] font-medium text-emerald-200">
+                                pronto
+                              </span>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
                     </div>
-                  </div>
+                  </Card>
                 ))}
-
-                <motion.div
-                  className="pointer-events-none absolute top-[3.6rem] left-[0.5rem] hidden w-[calc(33.333%-0.9rem)] rounded-xl border border-kyn-primary/30 bg-[linear-gradient(180deg,rgba(124,58,237,0.34),rgba(124,58,237,0.18))] px-3 py-2 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(124,58,237,0.24)] lg:block"
-                  animate={
-                    shouldReduceMotion
-                      ? { x: "110%", y: 0, opacity: 1 }
-                      : { x: ["0%", "110%", "220%"], y: [0, 8, 0], opacity: [0.92, 1, 0.92] }
-                  }
-                  transition={
-                    shouldReduceMotion
-                      ? { duration: 0 }
-                      : { duration: 5.5, repeat: Infinity, ease: "easeInOut" }
-                  }
-                >
-                  Mariana • pronta para demo
-                </motion.div>
-              </div>
-
-              <div className="mt-4 grid gap-3 md:grid-cols-[1.05fr_0.95fr]">
-                <div className="rounded-[1.2rem] border border-white/10 bg-black/20 p-4">
-                  <p className="text-xs uppercase tracking-[0.22em] text-kyn-text-muted">
-                    Sinais capturados pela IA
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {[
-                      "WhatsApp",
-                      "dor mapeada",
-                      "urgencia",
-                      "decisor",
-                      "proximo passo",
-                    ].map((signal) => (
-                      <span
-                        key={signal}
-                        className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs text-kyn-text-secondary"
-                      >
-                        {signal}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="rounded-[1.2rem] border border-kyn-primary/30 bg-kyn-primary/12 p-4">
-                  <p className="text-xs uppercase tracking-[0.22em] text-kyn-text-muted">
-                    Proximo passo sugerido
-                  </p>
-                  <p className="mt-3 text-lg font-semibold">
-                    Passar para o vendedor com contexto pronto.
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-kyn-text-secondary">
-                    A IA qualificou a conversa, atualizou o pipeline e deixou claro
-                    porque essa oportunidade merece atencao humana agora.
-                  </p>
-                </div>
               </div>
             </motion.div>
           </div>
         </motion.section>
 
         <motion.section
-          id="recursos"
           initial={false}
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={sectionContainer}
-          className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]"
+          className="grid gap-5 lg:grid-cols-3"
         >
-          <div>
-            <SectionTitle
-              title="Feita para operacao comercial, nao para discurso de software"
-              description="A Kynovia entra no ponto mais sensivel do processo: responder rapido, qualificar bem e entregar o timing certo para o time humano."
-            />
-            <div className="rounded-[1.6rem] border border-white/8 bg-black/18 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                O que muda na pratica
-              </p>
-              <p className="mt-4 text-lg leading-8 text-[color:rgba(250,250,250,0.78)]">
-                Em vez de deixar o vendedor preso ao primeiro contato, a Kynovia
-                segura a operacao inicial no WhatsApp e sobe a regua da qualificacao.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {resources.map((resource) => (
-              <motion.div key={resource.title} variants={revealUp}>
-                <Card
-                  interactive
-                  className="h-full rounded-[1.6rem] border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] backdrop-blur-xl"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                    {resource.eyebrow}
-                  </p>
-                  <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em]">
-                    {resource.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-kyn-text-secondary">
-                    {resource.description}
-                  </p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          {resources.map((resource) => (
+            <motion.div key={resource.title} variants={revealUp}>
+              <Card className="h-full rounded-[1.7rem] border border-white/8 bg-white/[0.04] p-6 shadow-none backdrop-blur-xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
+                  {resource.eyebrow}
+                </p>
+                <h3 className="mt-4 text-2xl font-semibold leading-tight text-white">
+                  {resource.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-kyn-text-secondary">
+                  {resource.description}
+                </p>
+              </Card>
+            </motion.div>
+          ))}
         </motion.section>
 
         <motion.section
@@ -435,84 +391,34 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={sectionContainer}
-          className="overflow-hidden rounded-[1.9rem] border border-white/8 bg-[linear-gradient(135deg,rgba(124,58,237,0.15),rgba(7,10,16,0.9)_45%,rgba(9,12,20,0.98))]"
-        >
-          <div className="grid gap-8 px-6 py-8 md:px-8 md:py-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <motion.div variants={revealUp}>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                Fluxo guiado
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] md:text-5xl">
-                Primeiro contato automatico. Escalada humana na hora certa.
-              </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[color:rgba(250,250,250,0.72)]">
-                A promessa e simples: o lead nao fica esperando e o vendedor nao
-                perde tempo com oportunidade fria.
-              </p>
-            </motion.div>
-
-            <motion.div variants={revealUp} className="grid gap-4">
-              {workflow.map((item) => (
-                <div
-                  key={item.step}
-                  className="rounded-[1.5rem] border border-white/10 bg-black/22 px-5 py-5 backdrop-blur-md"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-kyn-primary/40 bg-kyn-primary/16 text-sm font-semibold text-kyn-text-primary">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-kyn-text-secondary">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-
-        <motion.section
-          initial={false}
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={sectionContainer}
-          className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]"
+          className="grid gap-8 rounded-[1.9rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] px-6 py-8 md:px-8 lg:grid-cols-[0.88fr_1.12fr]"
         >
           <motion.div variants={revealUp}>
             <SectionTitle
-              title="Clareza para o time. Confianca para a gestao."
-              description="Sem superlativo vazio. Sem promessa de software que faz tudo. A Kynovia resolve um trecho especifico e caro da operacao comercial."
+              eyebrow="Fluxo"
+              title="O vendedor entra na hora certa"
+              description="A Kynovia cobre o primeiro contato, a qualificação e o follow-up inicial. O time humano entra com contexto e próximo passo definidos."
             />
           </motion.div>
 
-          <motion.div variants={revealUp} className="grid gap-5 sm:grid-cols-2">
-            <Card className="rounded-[1.6rem] border-white/10 bg-black/18">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                Ganho imediato
-              </p>
-              <p className="mt-4 text-2xl font-semibold tracking-[-0.03em]">
-                Menos atraso no primeiro contato
-              </p>
-              <p className="mt-4 text-sm leading-7 text-kyn-text-secondary">
-                O lead para de esfriar esperando retorno enquanto o time esta preso
-                em tarefas repetitivas.
-              </p>
-            </Card>
-            <Card className="rounded-[1.6rem] border-white/10 bg-black/18">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                Ganho estrutural
-              </p>
-              <p className="mt-4 text-2xl font-semibold tracking-[-0.03em]">
-                Mais consistencia em cada etapa do funil
-              </p>
-              <p className="mt-4 text-sm leading-7 text-kyn-text-secondary">
-                O time comercial recebe menos ruido e mais oportunidade com motivo,
-                contexto e proximo passo claros.
-              </p>
-            </Card>
+          <motion.div variants={revealUp} className="space-y-4">
+            {workflow.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-[1.5rem] border border-white/8 bg-black/20 p-5 backdrop-blur-md"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
+                    {item.step}
+                  </span>
+                  <div className="h-px flex-1 bg-white/10" />
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-kyn-text-secondary">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </motion.div>
         </motion.section>
 
@@ -521,85 +427,87 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={sectionContainer}
-          className="rounded-[2rem] border border-white/8 bg-[linear-gradient(135deg,rgba(16,16,24,0.92),rgba(124,58,237,0.12))] px-6 py-8 md:px-8 md:py-10"
+          className="rounded-[1.9rem] border border-white/8 bg-[linear-gradient(135deg,rgba(124,58,237,0.18),rgba(8,9,15,0.92)_55%,rgba(8,9,15,0.98))] px-6 py-8 md:px-8 md:py-10"
         >
-          <motion.div variants={revealUp} className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-                Proximo passo
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] md:text-5xl">
-                Coloque um SDR com IA no seu WhatsApp.
-              </h2>
-              <p className="mt-4 text-base leading-8 text-[color:rgba(250,250,250,0.72)]">
-                Se o seu time perde oportunidade por demora ou follow-up irregular,
-                a Kynovia entra para segurar essa etapa e passar o que importa para
-                vendas.
-              </p>
-            </div>
+          <motion.div variants={revealUp} className="max-w-3xl">
+            <SectionTitle
+              eyebrow="Para quem"
+              title="Equipes B2B que perdem oportunidade por demora ou falta de consistência"
+              description="Se o lead entra no WhatsApp e o time não consegue responder com rapidez, qualificar bem e manter o follow-up, a operação fica frágil. A Kynovia entra exatamente nesse ponto."
+            />
+          </motion.div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/signup"
-                className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06))] px-6 py-3 text-center text-sm font-semibold leading-[1.15] text-white shadow-[0_18px_40px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-2xl transition hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.18),rgba(255,255,255,0.08))]"
+          <motion.div
+            variants={revealUp}
+            className="mt-8 grid gap-4 md:grid-cols-3"
+          >
+            {[
+              "Recebem leads e demoram para responder.",
+              "Dependem de vendedor para fazer triagem inicial.",
+              "Perdem consistência no follow-up comercial.",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-[1.4rem] border border-white/10 bg-black/20 px-4 py-5 text-sm leading-7 text-kyn-text-secondary backdrop-blur-md"
               >
-                Solicitar demonstracao
-              </Link>
-              <Link
-                href="/contato"
-                className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/12 bg-[linear-gradient(180deg,rgba(16,18,26,0.86),rgba(16,18,26,0.66))] px-6 py-3 text-center text-sm font-semibold leading-[1.15] text-white shadow-[0_18px_40px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl transition hover:border-white/18 hover:bg-[linear-gradient(180deg,rgba(22,24,34,0.92),rgba(22,24,34,0.72))]"
-              >
-                Falar com especialista
-              </Link>
-            </div>
+                {item}
+              </div>
+            ))}
           </motion.div>
         </motion.section>
-      </main>
 
-      <footer className="relative border-t border-kyn-border bg-black/18 backdrop-blur-md">
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-10 text-sm md:grid-cols-[1.2fr_0.8fr_0.8fr] md:px-10">
+        <motion.section
+          initial={false}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={sectionContainer}
+          className="rounded-[1.9rem] border border-white/8 bg-white/[0.03] px-6 py-8 md:px-8 md:py-10"
+        >
+          <motion.div variants={revealUp} className="max-w-3xl">
+            <SectionTitle
+              eyebrow="Próximo passo"
+              title="Veja como a Kynovia opera no seu fluxo comercial"
+              description="Se você quer entender como isso funciona na prática, solicite uma demonstração e converse com o nosso time."
+            />
+          </motion.div>
+
+          <motion.div
+            variants={revealUp}
+            className="mt-8 flex flex-col gap-3 sm:flex-row"
+          >
+            <Link
+              href="/signup"
+              className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06))] px-6 py-3 text-center text-sm font-semibold leading-[1.15] text-white shadow-[0_18px_40px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-2xl transition hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.18),rgba(255,255,255,0.08))]"
+            >
+              Solicitar demonstração
+            </Link>
+            <Link
+              href="/contato"
+              className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/10 bg-black/20 px-6 py-3 text-center text-sm font-semibold leading-[1.15] text-white transition hover:border-white/16 hover:bg-black/30"
+            >
+              Falar com especialista
+            </Link>
+          </motion.div>
+        </motion.section>
+
+        <footer className="flex flex-col gap-5 border-t border-white/8 py-8 text-sm text-kyn-text-muted md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-kyn-text-muted">
-              Kynovia
-            </p>
-            <p className="mt-4 max-w-sm text-sm leading-7 text-kyn-text-secondary">
-              Agente comercial com IA para equipes B2B que operam no WhatsApp e
-              precisam responder rapido, qualificar melhor e entregar contexto para vendas.
-            </p>
+            <p className="font-medium text-kyn-text-secondary">Kynovia</p>
+            <p className="mt-1">Agente comercial com IA para operação via WhatsApp.</p>
           </div>
-          <div>
-            <h4 className="mb-3 font-semibold text-kyn-text-primary">Produto</h4>
-            <div className="space-y-2 text-kyn-text-secondary">
-              <Link href="/#recursos" className="block transition hover:text-white">
-                Recursos
-              </Link>
-              <Link href="/#demo" className="block transition hover:text-white">
-                Pipeline automatico
-              </Link>
-              <Link href="/signup" className="block transition hover:text-white">
-                Solicitar demonstracao
-              </Link>
-            </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link href="/privacidade" className="transition hover:text-white">
+              Política de privacidade
+            </Link>
+            <Link href="/termos" className="transition hover:text-white">
+              Termos de uso
+            </Link>
+            <Link href="/contato" className="transition hover:text-white">
+              Contato
+            </Link>
           </div>
-          <div>
-            <h4 className="mb-3 font-semibold text-kyn-text-primary">Empresa</h4>
-            <div className="space-y-2 text-kyn-text-secondary">
-              <Link href="/contato" className="block transition hover:text-white">
-                Contato
-              </Link>
-              <Link href="/termos" className="block transition hover:text-white">
-                Termos
-              </Link>
-              <Link href="/privacidade" className="block transition hover:text-white">
-                Privacidade
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-kyn-border px-6 py-4 text-center text-xs text-kyn-text-muted md:px-10">
-          Kynovia - agente comercial com IA para operacoes B2B no WhatsApp.
-        </div>
-      </footer>
+        </footer>
+      </main>
     </div>
   );
 }
