@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0f;
+  --foreground: #fafafa;
+
+  --kyn-background: #0b0b0f;
+  --kyn-background-elevated: #111118;
+  --kyn-background-subtle: #1a0b2e;
+
+  --kyn-border: #1f1f2a;
+  --kyn-border-strong: #2a2a3a;
+  --kyn-border-soft: rgba(255, 255, 255, 0.08);
+
+  --kyn-primary: #7c3aed;
+  --kyn-primary-hover: #6d28d9;
+  --kyn-primary-muted: #4c1d95;
+  --kyn-primary-glow: rgba(139, 92, 246, 0.4);
+
+  --kyn-text-primary: #fafafa;
+  --kyn-text-secondary: #a1a1aa;
+  --kyn-text-muted: #71717a;
+  --kyn-text-inverted: #0b0b0f;
+
+  --kyn-hero-gradient: linear-gradient(
+    135deg,
+    #100817 0%,
+    #0a0b11 44%,
+    #090b10 100%
+  );
+  --kyn-glow-ambient: rgba(124, 58, 237, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-kyn-background: var(--kyn-background);
+  --color-kyn-background-elevated: var(--kyn-background-elevated);
+  --color-kyn-background-subtle: var(--kyn-background-subtle);
+  --color-kyn-border: var(--kyn-border);
+  --color-kyn-border-strong: var(--kyn-border-strong);
+  --color-kyn-border-soft: var(--kyn-border-soft);
+  --color-kyn-primary: var(--kyn-primary);
+  --color-kyn-primary-hover: var(--kyn-primary-hover);
+  --color-kyn-primary-muted: var(--kyn-primary-muted);
+  --color-kyn-text-primary: var(--kyn-text-primary);
+  --color-kyn-text-secondary: var(--kyn-text-secondary);
+  --color-kyn-text-muted: var(--kyn-text-muted);
+  --font-sans:
+    "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --font-mono:
+    "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", monospace;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 28%),
+    linear-gradient(180deg, #0a0b11 0%, #0b0b0f 32%, #090a10 100%);
+  color: var(--kyn-text-primary);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.45);
+  color: #ffffff;
+}
