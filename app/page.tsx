@@ -37,7 +37,7 @@ const kanbanColumns = [
   {
     title: "Novos",
     badge: "entrada",
-    cards: ["Clinica Master", "Viva Ensino"],
+    cards: ["Clínica Master", "Viva Ensino"],
   },
   {
     title: "Qualificados",
@@ -77,19 +77,25 @@ const workflow = [
     step: "01",
     title: "O lead chama no WhatsApp e recebe resposta imediata",
     description:
-      "A conversa começa sem fila humana. A Kynovia aborda, entende a demanda e conduz o primeiro contato.",
+      "A conversa começa na hora. A Kynovia responde sem fila humana, entende a demanda e conduz o primeiro contato com contexto.",
   },
   {
     step: "02",
     title: "A IA qualifica com perguntas progressivas",
     description:
-      "Ela coleta informações importantes sem parecer formulário travado e separa curiosos de oportunidades reais.",
+      "Ela faz as perguntas certas ao longo da conversa, identifica perfil, urgência e interesse real, e separa curiosos de oportunidades concretas.",
   },
   {
     step: "03",
+    title: "A IA agenda uma reunião com o lead diretamente no Google Calendar",
+    description:
+      "Quando faz sentido avançar, a IA consulta sua agenda, confirma o melhor horário com o lead e deixa a reunião agendada de forma automática.",
+  },
+  {
+    step: "04",
     title: "O vendedor recebe a oportunidade com contexto pronto",
     description:
-      "Quando faz sentido escalar, o time entra com histórico, motivo do contato e próximo passo já sugerido.",
+      "O time comercial entra no momento certo, com histórico da conversa, motivo do contato e próximo passo já organizados.",
   },
 ];
 
@@ -262,7 +268,7 @@ export default function Home() {
             <motion.div variants={revealUp} className="p-6 md:p-8 lg:p-10">
               <SectionTitle
                 title="A IA conversa, qualifica e move a oportunidade no pipeline"
-                description="O Kanban acompanha a operação sem depender de atualização manual. Quando a conversa evolui, a oportunidade muda de etapa com contexto para o time comercial."
+                description="O Kanban acompanha a operação em tempo real, sem depender de atualização manual. À medida que a conversa avança, a oportunidade muda de etapa com contexto pronto para o time comercial."
               />
 
               <div className="mt-6 space-y-4 text-sm leading-7 text-kyn-text-secondary">
@@ -327,7 +333,7 @@ export default function Home() {
                   <div className="rounded-[1.25rem] border border-emerald-300/20 bg-[linear-gradient(180deg,rgba(31,41,55,0.92),rgba(13,18,29,0.82))] p-4 shadow-[0_22px_46px_rgba(0,0,0,0.42)] backdrop-blur-xl">
                     <div className="flex items-center justify-between gap-3">
                       <div>
-                        <p className="font-medium text-white">Clinica Master</p>
+                        <p className="font-medium text-white">Clínica Master</p>
                         <p className="mt-1 text-sm text-kyn-text-secondary">
                           Qualificado pela IA e encaminhado para vendas
                         </p>
@@ -340,64 +346,64 @@ export default function Home() {
                 </motion.div>
 
                 <div className="grid gap-4 md:grid-cols-3">
-                {kanbanColumns.map((column, columnIndex) => (
-                  <Card
-                    key={column.title}
-                    className="relative min-h-[15rem] rounded-[1.6rem] border border-white/8 bg-white/[0.04] p-4 shadow-none backdrop-blur-xl"
-                  >
-                    <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-kyn-text-muted">
-                      <span>{column.title}</span>
-                      <span className="rounded-full border border-white/10 px-2 py-1 text-[10px] text-white/70">
-                        {column.badge}
-                      </span>
-                    </div>
+                  {kanbanColumns.map((column, columnIndex) => (
+                    <Card
+                      key={column.title}
+                      className="relative min-h-[15rem] rounded-[1.6rem] border border-white/8 bg-white/[0.04] p-4 shadow-none backdrop-blur-xl"
+                    >
+                      <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-kyn-text-muted">
+                        <span>{column.title}</span>
+                        <span className="rounded-full border border-white/10 px-2 py-1 text-[10px] text-white/70">
+                          {column.badge}
+                        </span>
+                      </div>
 
-                    <div className="mt-4 space-y-3">
-                      {column.cards.map((card, cardIndex) => {
-                        const animated = columnIndex === 1 && cardIndex === 0;
-                        const motionProps = animated
-                          ? {
-                              animate: shouldReduceMotion
-                                ? { y: 0, opacity: 1 }
-                                : {
-                                    y: [12, 0, 0, 0],
-                                    opacity: [0.45, 0.7, 0.45, 0.45],
-                                    scale: [0.985, 1, 0.985, 0.985],
-                                  },
-                              transition: shouldReduceMotion
-                                ? { duration: 0 }
-                                : {
-                                    duration: 5.8,
-                                    repeat: Infinity,
-                                    ease: "easeInOut",
-                                    repeatDelay: 0.8,
-                                  },
-                            }
-                          : {};
+                      <div className="mt-4 space-y-3">
+                        {column.cards.map((card, cardIndex) => {
+                          const animated = columnIndex === 1 && cardIndex === 0;
+                          const motionProps = animated
+                            ? {
+                                animate: shouldReduceMotion
+                                  ? { y: 0, opacity: 1 }
+                                  : {
+                                      y: [12, 0, 0, 0],
+                                      opacity: [0.45, 0.7, 0.45, 0.45],
+                                      scale: [0.985, 1, 0.985, 0.985],
+                                    },
+                                transition: shouldReduceMotion
+                                  ? { duration: 0 }
+                                  : {
+                                      duration: 5.8,
+                                      repeat: Infinity,
+                                      ease: "easeInOut",
+                                      repeatDelay: 0.8,
+                                    },
+                              }
+                            : {};
 
-                        return (
-                          <motion.div
-                            key={card}
-                            {...motionProps}
-                            className="rounded-[1.25rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05))] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.24)]"
-                          >
-                            <div className="flex items-center justify-between gap-3">
-                              <div>
-                                <p className="font-medium text-white">{card}</p>
-                                <p className="mt-1 text-sm text-kyn-text-secondary">
-                                  Perfil compatível com operação B2B
-                                </p>
+                          return (
+                            <motion.div
+                              key={card}
+                              {...motionProps}
+                              className="rounded-[1.25rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05))] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.24)]"
+                            >
+                              <div className="flex items-center justify-between gap-3">
+                                <div>
+                                  <p className="font-medium text-white">{card}</p>
+                                  <p className="mt-1 text-sm text-kyn-text-secondary">
+                                    Perfil compatível com operação B2B
+                                  </p>
+                                </div>
+                                <span className="rounded-full bg-emerald-400/15 px-2 py-1 text-[11px] font-medium text-emerald-200">
+                                  pronto
+                                </span>
                               </div>
-                              <span className="rounded-full bg-emerald-400/15 px-2 py-1 text-[11px] font-medium text-emerald-200">
-                                pronto
-                              </span>
-                            </div>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
-                  </Card>
-                ))}
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    </Card>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -439,7 +445,7 @@ export default function Home() {
             <SectionTitle
               eyebrow="Fluxo"
               title="O vendedor entra na hora certa"
-              description="A Kynovia cobre o primeiro contato, a qualificação e o follow-up inicial. O time humano entra com contexto e próximo passo definidos."
+              description="A Kynovia responde, qualifica, conduz o follow-up inicial e, quando faz sentido, agenda a próxima reunião automaticamente. O time humano entra com contexto pronto e o próximo passo já organizado."
             />
           </motion.div>
 
@@ -474,8 +480,8 @@ export default function Home() {
           <motion.div variants={revealUp} className="max-w-3xl">
             <SectionTitle
               eyebrow="Para quem"
-              title="Equipes B2B que perdem oportunidade por demora ou falta de consistência"
-              description="Se o lead entra no WhatsApp e o time não consegue responder com rapidez, qualificar bem e manter o follow-up, a operação fica frágil. A Kynovia entra exatamente nesse ponto."
+              title="Equipes que perdem oportunidade por demora ou falta de consistência"
+              description="Se o lead entra no WhatsApp e o time não consegue responder com rapidez, qualificar bem e sustentar o follow-up, a operação perde consistência. A Kynovia entra exatamente nesse ponto."
             />
           </motion.div>
 
