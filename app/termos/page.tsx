@@ -211,12 +211,6 @@ export default function TermosPage() {
           </ul>
         </section>
       </div>
-
-      <p className="mt-10 rounded-lg border border-kyn-border bg-kyn-background-elevated p-4 text-xs leading-6 text-kyn-text-muted">
-        Aviso importante: este texto é um modelo institucional de termos de uso.
-        Recomenda-se revisão jurídica especializada para adequação completa ao
-        contexto operacional, contratual e regulatório da Kynovia.
-      </p>
     </main>
   );
 }
